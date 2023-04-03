@@ -34,6 +34,7 @@ ul {
 
 .d-flex {
   display: flex;
+  gap: 1rem;
 }
 
 .d-flex-col {
@@ -43,13 +44,13 @@ ul {
 
 #tickets {
   width: 768px;
+  gap: 1.5rem;
 }
 
 .ticket {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   justify-content: space-between;
-  gap: 1.5rem;
 }
 
 .ticket hr {
@@ -92,14 +93,23 @@ ul {
   width: 100%;
 }
 
+.company-info {
+  width: 40%;
+}
+
 .flight-info {
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
+  margin-left: 1.5rem;
+  width: 40%;
+}
+
+.travel-time {
+  border-bottom: 1px dashed var(--primary-color);
 }
 
 .info-div {
   display: flex;
-  gap: 10rem;
   width: 80%;
   align-items: center;
 }
