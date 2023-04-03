@@ -1,4 +1,4 @@
-export const logo = (logoSrc) => {
+export const setLogo = (logoSrc) => {
   const logoImage = document.createElement('img');
 
   logoImage.src = logoSrc;

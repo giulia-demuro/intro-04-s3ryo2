@@ -29,6 +29,7 @@ ul {
   margin: 1rem auto;
   height: 90vh;
   padding: 1rem;
+  background: grey;
 }
 
 .d-flex {
