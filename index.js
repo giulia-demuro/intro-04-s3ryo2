@@ -1,4 +1,3 @@
-import { flights } from './data';
 import { createContainer } from './components/container.js';
 
 import './style.css';

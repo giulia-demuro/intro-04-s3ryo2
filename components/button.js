@@ -1,8 +1,15 @@
 import { setText } from './text.js';
 
-export const setButton = (text, style) => {
+export const setButton = (
+  text,
+  textColor,
+  textSize,
+  textTag,
+  textStyle,
+  style
+) => {
   const newButton = document.createElement('button');
-  const btnText = setText('Book now', 'white', '1rem', 'h6', 'bold');
+  const btnText = setText(text, textColor, textSize, textTag, textStyle);
   newButton.appendChild(btnText);
   newButton.classList.add(style);
   newButton.classList.add('button');
