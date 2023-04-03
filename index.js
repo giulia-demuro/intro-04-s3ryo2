@@ -1,12 +1,13 @@
 import { flights } from './data';
-import { getTickets } from './tickets.js';
-import { setText } from './text.js';
-import { setButton } from './button.js';
+import { createContainer } from './components/container.js';
+
 import './style.css';
 
 const appDiv = document.getElementById('app');
 
-const container = document.createElement('div');
+const container = createContainer();
+
+/* const container = document.createElement('div');
 container.setAttribute('id', 'container');
 container.classList.add('d-flex');
 
@@ -43,5 +44,5 @@ const createCart = () => {
 getTickets();
 createCart();
 
-container.append(ticketsList, cart);
+container.append(ticketsList, cart); */
 appDiv.appendChild(container);
