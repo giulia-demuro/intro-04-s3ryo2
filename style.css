@@ -34,14 +34,11 @@ ul {
 
 .d-flex {
   display: flex;
-  gap: 1.5rem;
 }
 
 .d-flex-col {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
 }
 
 #tickets {
@@ -51,6 +48,8 @@ ul {
 .ticket {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
 
 .ticket hr {
@@ -87,18 +86,29 @@ ul {
 }
 
 .main-info {
-  display: flex;
   padding: 0.5rem 0.9rem;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+}
+
+.flight-info {
+  align-items: center;
+  justify-content: center;
 }
 
 .info-div {
   display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
+  gap: 10rem;
   width: 80%;
   align-items: center;
+}
+
+.price {
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.9rem;
+  width: 200px;
 }
 
 .booking-info {
@@ -106,4 +116,5 @@ ul {
   padding: 0.5rem 0.9rem;
   justify-content: right;
   align-items: center;
+  gap: 1.5rem;
 }

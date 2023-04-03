@@ -1,11 +1,23 @@
 import { createText } from '../text';
-export const setCompanyInfo = (companyName, aircraftType) => {
+import { createLogo } from './logo';
+export const setCompanyInfo = (options) => {
+  const { companyName, companyLogo, aircraftType } = options;
+  
+  const companyInfoDiv = document.createElement('div');
+  const logoDiv = document.createElement('div');
   const companyDiv = document.createElement('div');
-  //const logo = createLogo(item.companyName, item.companyLogo);
+
+  const logo = createLogo(companyName, companyLogo);
+
   const companyText = createText(companyName, 'black', '1rem', 'h3', '400');
   const aircraftText = createText(aircraftType, 'grey', '0.8rem', 'p', 'bold');
 
-  companyDiv.append(companyText, aircraftText);
+  logoDiv.appendChild(logo);
+  companyInfoDiv.append(companyText, aircraftText);
+  companyDiv.append(logoDiv, companyInfoDiv);
+
+  companyDiv.classList.add('company-info');
+  companyDiv.classList.add('d-flex');
 
   return companyDiv;
 };
