@@ -128,3 +128,20 @@ ul {
   align-items: center;
   gap: 1.5rem;
 }
+
+#cart {
+  border-radius: 5px;
+}
+
+#cart-header {
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 5px 5px 0 0;
+  justify-content: space-between;
+}
+
+#cart-elements {
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+}
