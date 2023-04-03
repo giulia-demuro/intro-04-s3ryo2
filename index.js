@@ -1,5 +1,7 @@
 import { flights } from './data';
 import { getTickets } from './tickets.js';
+import { setText } from './text.js';
+import { setButton } from './button.js';
 import './style.css';
 
 const appDiv = document.getElementById('app');
@@ -16,7 +18,11 @@ const getTickets = () => {
     const ticket = document.createElement('li');
     ticket.setAttribute('class', 'ticket');
 
-    ticket.innerText = 'Ticket';
+    //ticket.innerText = 'Ticket';
+    const newText = setText('Ticket', 'red', '12px', 'h1', 'bold');
+    const newButton = setButton('Book now', 'blue-bg');
+    ticket.append(newText, newButton);
+
     ticketsList.appendChild(ticket);
   });
 
@@ -28,6 +34,7 @@ const createCart = () => {
   cart.setAttribute('id', 'cart');
   const cartHeader = document.createElement('div');
   cartHeader.setAttribute('id', 'cart-header');
+  cartHeader.innerText = 'Cart';
 
   cart.appendChild(cartHeader);
   cart.innerText = 'Cart';

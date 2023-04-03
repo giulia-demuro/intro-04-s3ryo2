@@ -64,3 +64,15 @@ ul {
   background-color: #0d49c0;
   color: var(--text-light);
 }
+
+.blue-bg {
+  background: var(--primary-color);
+  padding: 0.2rem;
+  color: var(--text-light);
+}
+
+.button {
+  border-radius: 5px;
+  border: none;
+  padding: 0.2rem;
+}
