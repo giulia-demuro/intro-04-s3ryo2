@@ -12,6 +12,7 @@
   --text-primary: #141414;
   --background-color: #fafafd;
   --danger: crimson;
+  font-size: 16px;
 }
 
 body {
@@ -29,13 +30,10 @@ ul {
   margin: 1rem auto;
   height: 90vh;
   padding: 1rem;
-  background: grey;
 }
 
 .d-flex {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
   gap: 1.5rem;
 }
 
@@ -53,6 +51,10 @@ ul {
 .ticket {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
+}
+
+.ticket hr {
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #cart {
@@ -75,10 +77,33 @@ ul {
 .button {
   border-radius: 5px;
   border: none;
-  padding: 0.2rem;
+  padding: 0.5rem;
+  cursor: pointer;
 }
 
 .logo {
-  width: 2rem;
+  width: 3rem;
   border-radius: 50%;
+}
+
+.main-info {
+  display: flex;
+  padding: 0.5rem 0.9rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  width: 80%;
+  align-items: center;
+}
+
+.booking-info {
+  text-align: right;
+  padding: 0.5rem 0.9rem;
+  justify-content: right;
+  align-items: center;
 }

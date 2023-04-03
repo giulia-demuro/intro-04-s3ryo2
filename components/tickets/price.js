@@ -1,6 +1,6 @@
-import { setText } from '../text.js';
+import { createText } from '../text.js';
 export const setPrice = (price) => {
-  const priceText = setText(price, 'black', '1rem', 'h3', 'bold');
+  const priceText = createText(`€${price}`, 'black', '1rem', 'h3', 'bold');
 
   return priceText;
 };

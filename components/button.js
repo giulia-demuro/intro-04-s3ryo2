@@ -1,6 +1,6 @@
-import { setText } from './text.js';
+import { createText } from './text.js';
 
-export const setButton = (
+export const createButton = (
   text,
   textColor,
   textSize,
@@ -9,7 +9,7 @@ export const setButton = (
   style
 ) => {
   const newButton = document.createElement('button');
-  const btnText = setText(text, textColor, textSize, textTag, textStyle);
+  const btnText = createText(text, textColor, textSize, textTag, textStyle);
   newButton.appendChild(btnText);
   newButton.classList.add(style);
   newButton.classList.add('button');
