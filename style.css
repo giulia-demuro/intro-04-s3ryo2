@@ -76,3 +76,8 @@ ul {
   border: none;
   padding: 0.2rem;
 }
+
+.logo {
+  width: 2rem;
+  border-radius: 50%;
+}
