@@ -30,9 +30,13 @@ export const ticketsList = () => {
       passengers: item.passengers,
     });
 
-    const price = createPrice({ price: item.price });
-
+    const ticketId = item.price;
+    const price = createPrice({
+      price: item.price,
+      name: ticketId,
+    });
     const ticket = createTicket(companyInfo, flightInfo, price, bookingInfo);
+    ticket.setAttribute('id', ticketId);
 
     tickets.appendChild(ticket);
   });

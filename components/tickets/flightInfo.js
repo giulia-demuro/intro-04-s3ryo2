@@ -17,14 +17,21 @@ export const setFlightInfo = (options) => {
   departure.append(depTimeText, depAirportText);
   arrival.append(arrTimeText, arrAirportText);
 
-  calculateTravelTime(depTime, arrTime);
+  const calculatedTime = calculateTravelTime(depTime, arrTime);
+  const timeText = createText(
+    `${calculatedTime.hours}h ${calculatedTime.minutes}m`,
+    'grey',
+    '.8rem',
+    'p',
+    '400'
+  );
   travelTime.classList.add('travel-time');
-  travelTime.innerText = '1h 40m';
+  travelTime.appendChild(timeText);
 
   flightDiv.classList.add('d-flex');
   flightDiv.classList.add('flight-info');
 
-  const timeText = createText(`depTime`);
+  //const timeText = createText(`depTime`);
   flightDiv.append(departure, travelTime, arrival);
 
   return flightDiv;
