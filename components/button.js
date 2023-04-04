@@ -1,15 +1,14 @@
 import { createText } from './text.js';
-import { handleClickTicket } from '../utils';
+
 import { cartList } from './cart/cartElement';
 
-export const createButton = (text, textSize, style, name) => {
+export const createButton = (text, style, name, handleClick) => {
   const newButton = document.createElement('button');
-  //const btnText = createText(text, textSize, 'h6', 'bold');
-  newButton.innerText = 'Book now';
+  newButton.innerText = text;
   newButton.classList.add(style);
   newButton.classList.add('button');
-  newButton.name = name;
-  newButton.onclick = handleClickTicket;
+  newButton.id = `${name}${style === 'delete' ? '-cart' : ''}-btn`;
+  newButton.onclick = handleClick;
 
   console.log(newButton.name);
 

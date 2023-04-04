@@ -1,4 +1,5 @@
 const ticketsList = document.createElement('ul');
+
 export const getTickets = (flights) => {
   flights.forEach((item) => {
     const ticket = document.createElement('li');
@@ -6,7 +7,7 @@ export const getTickets = (flights) => {
 
     ticketsList.appendChild(ticket);
   });
-  
+
   ticketsList.setAttribute('id', 'tickets');
   return ticketsList;
 };

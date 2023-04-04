@@ -1,12 +1,13 @@
 import { createText } from '../text';
 import { createButton } from '../button';
+
 export const createPrice = (options) => {
-  const { price, name } = options;
+  const { price, name, onClick } = options;
 
   const priceDiv = document.createElement('div');
 
   const priceText = createText(`€${price}`, 'black', '1rem', 'h3', 'bold');
-  const btn = createButton('Book now', '.8rem', 'blue-bg', name);
+  const btn = createButton('Book now', 'blue-bg', null, onClick);
 
   priceDiv.classList.add('d-flex');
   priceDiv.classList.add('price');

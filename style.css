@@ -82,6 +82,12 @@ ul {
   cursor: pointer;
   font-size: 0.8rem;
   font-weight: bold;
+  width: 100px;
+  transition: 0.3s ease;
+}
+
+.button:hover {
+  letter-spacing: 0.05rem;
 }
 
 .logo {
@@ -170,6 +176,9 @@ ul {
 
 .delete {
   cursor: pointer;
+  color: red;
+  width: auto;
+  font-size: 0.8rem;
 }
 
 .selected {
