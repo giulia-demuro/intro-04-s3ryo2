@@ -1,19 +1,23 @@
-import { refreshCartElements } from './components/cart/cart';
+import { refreshUI } from './utils';
 const cart = {
   items: [],
   total: 0,
 };
 
 export const addToCart = (item) => {
+  if (cart.items.length === 2) {
+    return alert('Remove a flight first');
+  }
+
   cart.items.push(item);
   cart.total += item.price;
-  refreshCartElements();
+  refreshUI(item);
 };
 
 export const removeFromCart = (item) => {
-  cart.items.splice(0, 0, item);
-  cart.total = cart.total === item.price ? 0 : cart.total - price;
-  refreshCartElements();
+  cart.items = cart.items.filter((i) => i !== item);
+  cart.total = cart.total === item.price ? 0 : cart.total - item.price;
+  refreshUI(item);
 };
 
 export const getCartItems = () => {

@@ -1,7 +1,6 @@
-import { createText } from '../text.js';
-import { createCartElement } from './cartElement';
-import { total, increaseTotal, decreaseTotal } from '../../utils';
-import { getCartItems, getTotal } from '../../state';
+import { createText } from './text.js';
+import { createCartElement } from './cart/cartElement';
+import { removeFromCart, getCartItems, getTotal } from '../state';
 
 export const createCart = (options) => {
   const cartDiv = document.createElement('div');
@@ -43,6 +42,7 @@ export const refreshCartElements = () => {
       arrTime: item.arrivalTime,
       arrAirport: item.arrivalAirport,
       price: item.price,
+      onclick: () => removeFromCart(item),
     });
 
     cartElements.appendChild(newElement);

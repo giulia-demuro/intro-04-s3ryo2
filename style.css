@@ -103,14 +103,11 @@ ul {
 }
 
 .company-info {
-  width: 40%;
 }
 
 .flight-info {
   align-items: flex-start;
   justify-content: center;
-  margin-left: 1.5rem;
-  width: 40%;
 }
 
 .travel-time {

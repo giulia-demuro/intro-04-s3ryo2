@@ -1,11 +1,10 @@
-import { flights } from '../../data';
-import { createTicket } from './ticket';
-import { createLogo } from './logo';
-import { setCompanyInfo } from './companyInfo';
-import { setFlightInfo } from './flightInfo';
-import { setBookingInfo } from './bookingInfo';
-import { createPrice } from './price';
-import { addToCart } from '../../state';
+import { flights } from '../data';
+import { createTicket } from './tickets/ticket';
+import { setCompanyInfo } from './tickets/companyInfo';
+import { setFlightInfo } from './tickets/flightInfo';
+import { setBookingInfo } from './tickets/bookingInfo';
+import { createPrice } from './tickets/price';
+import { addToCart } from '../state';
 
 export const ticketsList = () => {
   const tickets = document.createElement('div');
