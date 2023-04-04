@@ -1,7 +1,6 @@
 import { createText } from '../text';
 import { createButton } from '../button';
 import { handleClickDelete } from '../../utils';
-const handleClicklDelete = (e) => {};
 
 export const createCartElement = (options) => {
   const { depTime, depAirport, arrTime, arrAirport, price } = options;

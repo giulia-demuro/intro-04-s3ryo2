@@ -1,13 +1,15 @@
 import { createText } from '../text.js';
 import { createCartElement } from './cartElement';
 import { total, increaseTotal, decreaseTotal } from '../../utils';
-import { getCartItems } from '../../state';
+import { getCartItems, getTotal } from '../../state';
 
 export const createCart = (options) => {
   const cartDiv = document.createElement('div');
   const cartHeader = document.createElement('div');
 
-  const cartElements = refreshCartElements();
+  const cartElements = document.createElement('div');
+  cartElements.setAttribute('id', 'cart-elements');
+  cartElements.classList.add('d-flex-col');
 
   const headerText = createText('Cart', 'white', '1.2rem', 'h3', 'bold');
 
@@ -26,12 +28,13 @@ export const createCart = (options) => {
   return cartDiv;
 };
 
-const refreshCartElements = () => {
+export const refreshCartElements = () => {
   const elements = getCartItems();
 
-  const cartElements = document.createElement('div');
-  cartElements.setAttribute('id', 'cart-elements');
-  cartElements.classList.add('d-flex-col');
+  const cartElements = document.getElementById('cart-elements');
+  const totalText = document.getElementById('total');
+
+  cartElements.innerHTML = '';
 
   elements.forEach((item) => {
     const newElement = createCartElement({
@@ -45,7 +48,7 @@ const refreshCartElements = () => {
     cartElements.appendChild(newElement);
   });
 
-  return cartElements;
+  totalText.innerText = getTotal();
 };
 
 export const appendCartElement = (item) => {
@@ -68,7 +71,7 @@ export const appendCartElement = (item) => {
 
 export const deleteCartElement = (item) => {
   const { elementId, element } = item;
-  const cartElements = document.getElementById('cart-elements');
+  let cartElements = document.getElementById('cart-elements');
   const cartTotal = document.getElementById('total');
 
   cartTotal.innerText = `€${decreaseTotal(total, element.price)}`;
