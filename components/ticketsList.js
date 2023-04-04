@@ -1,9 +1,9 @@
 import { flights } from '../data';
-import { createTicket } from './tickets/ticket';
-import { setCompanyInfo } from './tickets/companyInfo';
-import { setFlightInfo } from './tickets/flightInfo';
-import { setBookingInfo } from './tickets/bookingInfo';
-import { createPrice } from './tickets/price';
+import { createTicket } from './ticket';
+import { setCompanyInfo } from './ticket/companyInfo';
+import { setFlightInfo } from './ticket/flightInfo';
+import { setBookingInfo } from './ticket/bookingInfo';
+import { createPrice } from './ticket/price';
 import { addToCart } from '../state';
 
 export const ticketsList = () => {
@@ -34,7 +34,6 @@ export const ticketsList = () => {
 
     const price = createPrice({
       price: item.price,
-      name: ticketId,
       onClick: () => addToCart(item),
     });
     const ticket = createTicket(companyInfo, flightInfo, price, bookingInfo);

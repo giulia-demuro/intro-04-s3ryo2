@@ -6,7 +6,7 @@ const cart = {
 
 export const addToCart = (item) => {
   if (cart.items.length === 2) {
-    return alert('Remove a flight first');
+    return alert('Remove a flight first!');
   }
 
   cart.items.push(item);
@@ -16,7 +16,7 @@ export const addToCart = (item) => {
 
 export const removeFromCart = (item) => {
   cart.items = cart.items.filter((i) => i !== item);
-  cart.total = cart.total === item.price ? 0 : cart.total - item.price;
+  cart.total -= item.price;
   refreshUI(item);
 };
 

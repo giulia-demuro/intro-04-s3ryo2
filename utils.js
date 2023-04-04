@@ -1,12 +1,35 @@
-import { refreshCartElements } from './components/cart';
+import { removeFromCart, getCartItems, getTotal } from './state';
+import { createCartElement } from './components/cart/cartElement';
 
 export const refreshUI = (item) => {
   refreshCartElements();
 
   const selectedElement = document.getElementById(item.price);
   selectedElement.classList.toggle('selected');
+};
 
-  const button = document.getElementById(`${item.price}-btn`);
+export const refreshCartElements = () => {
+  const elements = getCartItems();
+
+  const cartElements = document.getElementById('cart-elements');
+  const totalText = document.getElementById('total');
+
+  cartElements.innerHTML = '';
+
+  elements.forEach((item) => {
+    const newElement = createCartElement({
+      depTime: item.departureTime,
+      depAirport: item.departureAirport,
+      arrTime: item.arrivalTime,
+      arrAirport: item.arrivalAirport,
+      price: item.price,
+      onclick: () => removeFromCart(item),
+    });
+
+    cartElements.appendChild(newElement);
+  });
+
+  totalText.innerText = `€ ${getTotal() || '0.00'}`;
 };
 
 export const calculateTravelTime = (departure, arrival) => {

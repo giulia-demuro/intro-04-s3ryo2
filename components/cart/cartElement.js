@@ -37,11 +37,12 @@ export const createCartElement = (options) => {
   flightInfo.classList.add('class', 'cart-flight-info');
 
   const priceDiv = document.createElement('div');
+
   const priceText = createText(`€ ${price}`, 'black', '1rem', 'p', 'bold');
   priceText.setAttribute('class', 'price-text');
-  const deleteButton = createButton(`✖`, 'delete', price, onclick);
-
   priceDiv.appendChild(priceText);
+
+  const deleteButton = createButton(`✖`, 'delete', onclick);
 
   priceInfo.classList.add('cart-price-info');
   priceInfo.classList.add('class', 'd-flex-col');
@@ -49,7 +50,6 @@ export const createCartElement = (options) => {
 
   cartElement.classList.add('d-flex');
   cartElement.classList.add('cart-element');
-  cartElement.setAttribute('id', `${price}-cart`);
 
   cartElement.append(flightInfo, priceInfo);
 

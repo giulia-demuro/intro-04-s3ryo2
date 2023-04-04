@@ -102,9 +102,6 @@ ul {
   width: 100%;
 }
 
-.company-info {
-}
-
 .flight-info {
   align-items: flex-start;
   justify-content: center;
@@ -176,6 +173,12 @@ ul {
   color: red;
   width: auto;
   font-size: 0.8rem;
+  height: auto;
+}
+
+.delete:hover {
+  transform: rotate(90deg);
+  letter-spacing: normal;
 }
 
 .selected {
@@ -184,4 +187,5 @@ ul {
 
 .selected button {
   background: var(--text-secondary);
+  pointer-events: none;
 }
