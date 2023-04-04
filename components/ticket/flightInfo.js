@@ -18,6 +18,7 @@ export const setFlightInfo = (options) => {
   arrival.append(arrTimeText, arrAirportText);
 
   const calculatedTime = calculateTravelTime(depTime, arrTime);
+  
   const timeText = createText(
     `${calculatedTime.hours}h ${calculatedTime.minutes}m`,
     'grey',
