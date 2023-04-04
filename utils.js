@@ -1,5 +1,5 @@
 import { removeFromCart, getCartItems, getTotal } from './state';
-import { createCartElement } from './components/cart/cartElement';
+import { createCartElement } from './components/cartElement';
 
 export const refreshUI = (item) => {
   refreshCartElements();

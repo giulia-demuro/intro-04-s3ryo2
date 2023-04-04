@@ -1,5 +1,5 @@
-import { createText } from '../text';
-import { createButton } from '../button';
+import { createText } from './text';
+import { createButton } from './button';
 
 export const createCartElement = (options) => {
   const { depTime, depAirport, arrTime, arrAirport, price, onclick } = options;
