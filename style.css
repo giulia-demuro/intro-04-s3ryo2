@@ -58,17 +58,6 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-#cart {
-  width: 256px;
-  background-color: var(--border-color);
-  height: 100%;
-}
-
-#cart-header {
-  background-color: #0d49c0;
-  color: var(--text-light);
-}
-
 .blue-bg {
   background: var(--primary-color);
   padding: 0.2rem;
@@ -134,6 +123,9 @@ ul {
 
 #cart {
   border-radius: 5px;
+  width: 256px;
+  background-color: var(--border-color);
+  height: 100%;
 }
 
 #cart-header {
@@ -186,6 +178,6 @@ ul {
 }
 
 .selected button {
-  background: var(--text-secondary);
+  background: var(--border-color);
   pointer-events: none;
 }

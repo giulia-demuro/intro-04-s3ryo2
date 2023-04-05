@@ -1,4 +1,5 @@
 import { refreshUI } from './utils';
+
 const cart = {
   items: [],
   total: 0,
